@@ -4,10 +4,10 @@
  */
 #include <eoslib/string.hpp>
 
-namespace car_rent {
+namespace carrent {
 
-    // @abi action register
-    struct add_car_msg {
+    // @abi action registercar
+    struct registercar {
         eosio::string car_id;
         eosio::string brand;
         eosio::string model;
@@ -15,22 +15,24 @@ namespace car_rent {
     };
 
 // @abi action activate
-    struct activate_rent_msg {
+    struct activate {
         eosio::string car_id;
         uint64_t price;
     };
 
 // @abi action deactivate
-    struct deactivate_rent_msg {
+    struct deactivate {
         eosio::string car_id;
     };
 
-// @abi action rent
-    struct rent_car_msg {
+// @abi action rentcar
+    struct rentcar {
         uint8_t body_type;
     };
 
-// @abi action return
-    struct return_car_msg{};
+// @abi action returncar
+    struct returncar {
+        eosio::string car_id;
+    };
 
 }

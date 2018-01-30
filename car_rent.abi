@@ -1,7 +1,7 @@
 {
   "types": [],
   "structs": [{
-      "name": "add_car_msg",
+      "name": "registercar",
       "base": "",
       "fields": {
         "car_id": "string",
@@ -10,45 +10,47 @@
         "body_type": "uint8"
       }
     },{
-      "name": "activate_rent_msg",
+      "name": "activate",
       "base": "",
       "fields": {
         "car_id": "string",
         "price": "uint64"
       }
     },{
-      "name": "deactivate_rent_msg",
+      "name": "deactivate",
       "base": "",
       "fields": {
         "car_id": "string"
       }
     },{
-      "name": "rent_car_msg",
+      "name": "rentcar",
       "base": "",
       "fields": {
         "body_type": "uint8"
       }
     },{
-      "name": "return_car_msg",
+      "name": "returncar",
       "base": "",
-      "fields": {}
+      "fields": {
+        "car_id": "string"
+      }
     }
   ],
   "actions": [{
-      "action_name": "register",
-      "type": "add_car_msg"
+      "action_name": "registercar",
+      "type": "registercar"
     },{
       "action_name": "activate",
-      "type": "activate_rent_msg"
+      "type": "activate"
     },{
       "action_name": "deactivate",
-      "type": "deactivate_rent_msg"
+      "type": "deactivate"
     },{
-      "action_name": "rent",
-      "type": "rent_car_msg"
+      "action_name": "rentcar",
+      "type": "rentcar"
     },{
-      "action_name": "return",
-      "type": "return_car_msg"
+      "action_name": "returncar",
+      "type": "returncar"
     }
   ],
   "tables": []
