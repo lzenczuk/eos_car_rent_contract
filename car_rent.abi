@@ -1,0 +1,55 @@
+{
+  "types": [],
+  "structs": [{
+      "name": "add_car_msg",
+      "base": "",
+      "fields": {
+        "car_id": "string",
+        "brand": "string",
+        "model": "string",
+        "body_type": "uint8"
+      }
+    },{
+      "name": "activate_rent_msg",
+      "base": "",
+      "fields": {
+        "car_id": "string",
+        "price": "uint64"
+      }
+    },{
+      "name": "deactivate_rent_msg",
+      "base": "",
+      "fields": {
+        "car_id": "string"
+      }
+    },{
+      "name": "rent_car_msg",
+      "base": "",
+      "fields": {
+        "body_type": "uint8"
+      }
+    },{
+      "name": "return_car_msg",
+      "base": "",
+      "fields": {}
+    }
+  ],
+  "actions": [{
+      "action_name": "register",
+      "type": "add_car_msg"
+    },{
+      "action_name": "activate",
+      "type": "activate_rent_msg"
+    },{
+      "action_name": "deactivate",
+      "type": "deactivate_rent_msg"
+    },{
+      "action_name": "rent",
+      "type": "rent_car_msg"
+    },{
+      "action_name": "return",
+      "type": "return_car_msg"
+    }
+  ],
+  "tables": []
+}
